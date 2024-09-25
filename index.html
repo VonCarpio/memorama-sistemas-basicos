@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memorama</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="titulo">
+        <h1>Memorama de Unidades de Computadora</h1>
+    </div>
+
+    <div class="intentoscontenedor">
+        <div class="intentos">Intentos: <span id="intentoContador">0</span></div>
+    </div>
+
+    <div class="game-board" id="gameBoard"></div>
+
+    <!-- Botón de reiniciar siempre visible -->
+    <div class="reiniciar-contenedor">
+        <button class="reinicio" onclick="restartGame()">Reiniciar</button>
+    </div>
+
+    <!-- Modal que aparece al ganar -->
+    <div id="winMessage" class="modal">
+        <div class="win-content">
+            <h2>¡Ganaste!</h2>
+            <button class="reinicio" onclick="restartGame()">Volver a jugar</button>
+        </div>
+    </div>    
+
+    <script src="script.js"></script>
+</body>
+</html>

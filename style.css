@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-image: url("https://cdn.pixabay.com/photo/2021/07/18/14/41/network-6475769_1280.jpg");
+    background-position: center;
+}
+
+.titulo {
+    margin: 10px;
+}
+
+h1 {
+    color: white;
+    text-shadow: rgb(24, 255, 251) 1px 0 10px;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(6, 150px);
+    grid-gap: 10px;
+    justify-content:center;
+}
+
+.card {
+    width: 140px;
+    height: 140px;
+    background-color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+    padding: px;
+    border-radius: 10px;
+    position: relative;
+    perspective: 1000px;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.card.flipped {
+    transform: rotateY(180deg);
+}
+
+.card-content {
+    width: 100%;
+    height: 100%;
+    background-color: #A0C8F9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    position: absolute;
+    backface-visibility: hidden;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.card-front {
+    background-color: #ff0000;
+}
+
+.card-back {
+    background-color: #000000;
+}
+
+.card.matched .card-content {
+    background-color: #10f700; /* Verde para indicar un match */
+    color: black; /* Texto negro para buena legibilidad */
+}
+
+/* Rotación del contenido de la carta */
+.card.flipped .card-content {
+    transform: rotateY(180deg);
+}
+.intentoscontenedor {
+    display: flex;
+    justify-content: center;
+}
+
+.intentos {
+    font-size: 25px;
+    height: 50px;
+    width: 400px;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    color: white;
+    background-color: #579DFA;
+}
+
+.reiniciar-contenedor {
+    margin-top: 20px;
+}
+
+.reinicio {
+    margin: 1rem;
+    padding: 1rem;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.reinicio:hover {
+    background-color: #aaa;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 2rem;
+    font-size: 2rem;
+    border-radius: 10px;
+}
+
+.modal.show {
+    display: block;
+}
