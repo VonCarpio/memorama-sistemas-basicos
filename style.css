@@ -3,12 +3,8 @@ body {
     text-align: center;
     background-image: url("https://cdn.pixabay.com/photo/2021/07/18/14/41/network-6475769_1280.jpg");
     background-position: center;
-    background-size: cover;
-    margin: 0;
-    padding: 0;
 }
 
-/* Estilos generales */
 .titulo {
     margin: 10px;
 }
@@ -18,16 +14,13 @@ h1 {
     text-shadow: rgb(24, 255, 251) 1px 0 10px;
 }
 
-/* Tablero del juego */
 .game-board {
     display: grid;
     grid-template-columns: repeat(6, 150px);
     grid-gap: 10px;
-    justify-content: center;
-    margin-bottom: 20px;
+    justify-content:center;
 }
 
-/* Cartas del memorama */
 .card {
     width: 140px;
     height: 140px;
@@ -38,6 +31,7 @@ h1 {
     font-size: 14px;
     text-align: center;
     cursor: pointer;
+    padding: px;
     border-radius: 10px;
     position: relative;
     perspective: 1000px;
@@ -64,12 +58,23 @@ h1 {
     color: #000000;
 }
 
+.card-front {
+    background-color: #ff0000;
+}
+
+.card-back {
+    background-color: #000000;
+}
+
 .card.matched .card-content {
     background-color: #10f700; /* Verde para indicar un match */
     color: black; /* Texto negro para buena legibilidad */
 }
 
-/* Contador de intentos */
+/* Rotación del contenido de la carta */
+.card.flipped .card-content {
+    transform: rotateY(180deg);
+}
 .intentoscontenedor {
     display: flex;
     justify-content: center;
@@ -87,7 +92,6 @@ h1 {
     background-color: #579DFA;
 }
 
-/* Botón de reinicio */
 .reiniciar-contenedor {
     margin-top: 20px;
 }
@@ -107,7 +111,6 @@ h1 {
     background-color: #aaa;
 }
 
-/* Modal de victoria */
 .modal {
     display: none;
     position: fixed;
@@ -149,7 +152,7 @@ h1 {
     .card {
         width: 100px;
         height: 100px;
-        font-size: 12px;
+        font-size: px;
     }
 
     .intentos {
