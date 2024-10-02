@@ -152,7 +152,7 @@ h1 {
     .card {
         width: 100px;
         height: 100px;
-        font-size: px;
+        font-size: 8px;
     }
 
     .intentos {
@@ -170,7 +170,7 @@ h1 {
     .card {
         width: 80px;
         height: 80px;
-        font-size: 10px;
+        font-size: 5px;
     }
 
     .intentos {
